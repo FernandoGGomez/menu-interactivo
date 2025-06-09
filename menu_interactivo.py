@@ -22,14 +22,14 @@ while activo:
     
     eleccion = input("Por favor, seleccione una opcion: ") # Capturamos la opción del usuario.
 
-    if(eleccion == "1"):
+    if(eleccion == "1"): # Opción 1: Consulta de saldo
         print(f"{arbol[1][1][0]}\n{arbol[1][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
-            print(f"Su saldo es de {random.randint(10000,100000)} pesos")
+            print(f"Su saldo es de {random.randint(10000,100000)} pesos") # Simula saldo de cuenta corriente
         else:
-            print(f"Su saldo es de {random.randint(5000,10000)} pesos")
-    elif(eleccion == "2"):
+            print(f"Su saldo es de {random.randint(5000,10000)} pesos") # Simula saldo de cuenta ahorro
+    elif(eleccion == "2"): # Opción 2: Retiro de efectivo
         print(f"{arbol[2][1][0]}\n{arbol[2][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
@@ -37,7 +37,7 @@ while activo:
         else:
             monto = input("Ingrese el monto a retirar: ")
             print(f"Usted retiro {monto} pesos de manera exitosa.")
-    elif(eleccion == "3"):
+    elif(eleccion == "3"):  # pción 3: Depósitos
         print(f"{arbol[3][1][0]}\n{arbol[3][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
@@ -48,7 +48,7 @@ while activo:
             print("Ingrese el sobre por la boquilla del cajero")
             time.sleep(3)
             print("Se ingreso el dinero de manera exitosa")
-    elif(eleccion == "4"):
+    elif(eleccion == "4"): # Opción 4: Transferencias
         print(f"{arbol[4][1][0]}\n{arbol[4][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
@@ -59,7 +59,7 @@ while activo:
             cbu = input("Ingrese el alias: ")
             monto = input("Ahora ingrese el dinero a transferir: ")
             print(f"Se ha realizado la transferncia con exito al cbu: {cbu} con un monto total de {monto} pesos")
-    elif(eleccion == "5"):
+    elif(eleccion == "5"): # Opción 5: Cambio de clave
         print(f"{arbol[5][1][0]}\n{arbol[5][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
