@@ -1,17 +1,26 @@
 import time, random
 
-arbol = ["Menu Principal", ["1_ Consulta de saldo", ["1_ Consultar saldo cuenta corriente"], ["2_ Consultar saldo cuenta ahorro"]], ["2_ Retiro de efectivo", ["1_ Retirar 20 mil pesos"], ["2_ Retirar un monto especifico"]], ["3_ Depositos",["1_ Depositar en efectivo",], ["2_ Depositar en sobre"]], ["4_ Transferencias", ["1_ Transferir a un alias"], ["2_ Transferir a un CBU/CVU"]], ["5_ Cambiar de clave", ["1_Cambiar clave del cajero"], ["2_Cambiar clave del home banking"]]]
+# Estructura de árbol de menús del cajero automático
+arbol = ["Menu Principal", 
+         ["1_ Consulta de saldo", ["1_ Consultar saldo cuenta corriente"], ["2_ Consultar saldo cuenta ahorro"]], 
+         ["2_ Retiro de efectivo", ["1_ Retirar 20 mil pesos"], ["2_ Retirar un monto especifico"]], 
+         ["3_ Depositos",["1_ Depositar en efectivo",], ["2_ Depositar en sobre"]], 
+         ["4_ Transferencias", ["1_ Transferir a un alias"], ["2_ Transferir a un CBU/CVU"]], 
+         ["5_ Cambiar de clave", ["1_Cambiar clave del cajero"], ["2_Cambiar clave del home banking"]]]
 
-activo = True
+activo = True # Variable de control para mantener el bucle principal activo
 
+# Bucle principal del programa
 while activo:
 
     print("Bienvenido al banco")
     print(arbol[0])
+    
+    # Mostrar las opciones principales del menú
     for submenu in arbol[1:]:
         print(submenu[0])
     
-    eleccion = input("Por favor, seleccione una opcion: ")
+    eleccion = input("Por favor, seleccione una opcion: ") # Capturamos la opción del usuario.
 
     if(eleccion == "1"):
         print(f"{arbol[1][1][0]}\n{arbol[1][2][0]}")
@@ -60,10 +69,12 @@ while activo:
             input("Ingrese la nueva contraseña para usar su home banking: ")
             print("La contraseña se cambio con exito")
     else:
-        print("Opcion invalida")
+        print("Opcion invalida") # Opción inválida.
     
+    # Pregunta al usuario si desea continuar
     continuar = input("Desea realizar otra operacion? (s/n)").lower()
     if continuar != "s":
         print("Gracias por usar el cajero, vuelva pronto.")
-        activo = False
+        activo = False # Finaliza el bucle si el usuario decidio no continuar.
     
+
