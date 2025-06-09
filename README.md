@@ -17,4 +17,4 @@ Es por esto, qué como técnicos en programación, profundizar en esta herramien
 ## Objetivos del proyecto
 A través de este trabajo, se tiene previsto explorar la teoría detrás de los árboles y aprender a implementarlos en Python.
 
-#### Enlace al video de presentación: 
+#### Enlace al video de presentación: https://www.youtube.com/watch?v=sTit_EGrwVI
