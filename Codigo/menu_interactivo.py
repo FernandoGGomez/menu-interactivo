@@ -56,7 +56,7 @@ while activo:
             monto = input("Ahora ingrese el dinero a transferir: ")
             print(f"Se ha realizado la transferncia con exito al alias: {alias} con un monto total de {monto} pesos")
         else:
-            cbu = input("Ingrese el alias: ")
+            cbu = input("Ingrese el CBU: ")
             monto = input("Ahora ingrese el dinero a transferir: ")
             print(f"Se ha realizado la transferncia con exito al cbu: {cbu} con un monto total de {monto} pesos")
     elif(eleccion == "5"): # Opción 5: Cambio de clave
