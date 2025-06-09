@@ -37,7 +37,7 @@ while activo:
         else:
             monto = input("Ingrese el monto a retirar: ")
             print(f"Usted retiro {monto} pesos de manera exitosa.")
-    elif(eleccion == "3"):  # pción 3: Depósitos
+    elif(eleccion == "3"):  # Opción 3: Depósitos
         print(f"{arbol[3][1][0]}\n{arbol[3][2][0]}")
         eleccion = input("Por favor, seleccione una opcion: ")
         if (eleccion == "1"):
