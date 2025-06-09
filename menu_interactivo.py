@@ -2,9 +2,12 @@ import time, random
 
 arbol = ["Menu Principal", ["1_ Consulta de saldo", ["1_ Consultar saldo cuenta corriente"], ["2_ Consultar saldo cuenta ahorro"]], ["2_ Retiro de efectivo", ["1_ Retirar 20 mil pesos"], ["2_ Retirar un monto especifico"]], ["3_ Depositos",["1_ Depositar en efectivo",], ["2_ Depositar en sobre"]], ["4_ Transferencias", ["1_ Transferir a un alias"], ["2_ Transferir a un CBU/CVU"]], ["5_ Cambiar de clave", ["1_Cambiar clave del cajero"], ["2_Cambiar clave del home banking"]]]
 
-while True:
+activo = True
+
+while activo:
 
     print("Bienvenido al banco")
+    print(arbol[0])
     for submenu in arbol[1:]:
         print(submenu[0])
     
@@ -62,5 +65,5 @@ while True:
     continuar = input("Desea realizar otra operacion? (s/n)").lower()
     if continuar != "s":
         print("Gracias por usar el cajero, vuelva pronto.")
-        break
+        activo = False
     
